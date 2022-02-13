@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Switch } from 'react-router-dom';
+import Footer from './common/Footer';
+import Header from './common/Header';
+import FlipCoin from './content/FlipCoin';
+import RandomPicker from './content/RandomPicker';
+import YesNo from './content/YesNo';
+import Home from './home/Home';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <Switch>
+        <Route exact path={"/"}>
+          <Home />
+        </Route>
+        <Route path={"/yes-no"}>
+          <YesNo />
+        </Route>
+        <Route exact path={"/flip-coin"}>
+          <FlipCoin />
+        </Route>
+        <Route exact path={"/random-picker"}>
+          <RandomPicker />
+        </Route>
+      </Switch>
+      <Footer />
+    </>
   );
 }
 
