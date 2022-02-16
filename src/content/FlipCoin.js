@@ -16,6 +16,12 @@ export default function FlipCoin() {
             <div className="emoji">🤔</div>
             <p className="msg">let's go!</p>
           </div>
+        ) : decider % 37 === 0 ? (
+          <div className="main">
+            <div className="emoji">🥺</div>
+            <p className="msg">oops!</p>
+            <p className="oops">i lost the coin.</p>
+          </div>
         ) : decider % 2 === 0 ? (
           <div className="main">
             <div className="emoji">👽</div>
