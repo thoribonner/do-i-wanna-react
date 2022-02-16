@@ -48,7 +48,7 @@ export default function RandomPicker() {
         ) : (
           <>
           <p className="picked">{picked}</p>
-          <p className="universe">the universe spoken</p>
+          <p className="universe">the universe has spoken</p>
           </>
         )}
       </div>
