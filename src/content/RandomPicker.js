@@ -55,7 +55,7 @@ export default function RandomPicker() {
       {list.length > 0
         ? (
           <div className="options">
-            <h3 className="options-heading"></h3>
+            <h3 className="options-heading">your options</h3>
             <ul className="option-list">
               {list.map((current, index) => (
                 <li key={index}>{current}</li>
