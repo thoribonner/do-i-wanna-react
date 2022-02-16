@@ -41,6 +41,10 @@ button {
   line-height: .8;
   color: #db5461;
 }
+.oops {
+  color: #db5461;
+  margin-top: 0;
+}
 .picked{
   text-align: center;
   font-family: 'Permanent Marker', cursive;
