@@ -1,4 +1,5 @@
 import { useHistory } from "react-router-dom"
+import "./Header.css";
 
 
 
@@ -10,8 +11,8 @@ export default function Header(){
         className="title"
         onClick={() => history.push("/")}
       >
-        <i className="fa-solid fa-brain"></i>
-        <h1>do i wanna...</h1>
+        <span className="icon header-icon">🧠</span>
+        <h1 className="title-text">do i wanna...</h1>
       </div>
     </header>
   )
