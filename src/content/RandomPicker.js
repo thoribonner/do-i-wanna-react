@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 export default function RandomPicker() {
   const [picked, setPicked] = useState(null);
   const [list, setList] = useState([]);
   const [item, setItem] = useState("");
+  const history = useHistory();
 
   const handleChange = ({ target }) => {
     setItem(target.value);
@@ -15,14 +17,15 @@ export default function RandomPicker() {
   };
   const handlePicker = () => {
     if (list.length > 0) {
-      setPicked(list[Math.floor(Math.random()) * list.length]);
+      console.log(Math.floor(Math.random() * list.length))
+      setPicked(list[Math.floor(Math.random() * list.length)]);
       setItem("");
       setList([]);
     }
   }
 
   return (
-    <>
+    <div className="content">
       <p className="info">
         type options in the entry field below.
         <br />
@@ -46,10 +49,10 @@ export default function RandomPicker() {
             <p className="msg">let's go!</p>
           </div>
         ) : (
-          <>
+          <div className="main">
           <p className="picked">{picked}</p>
           <p className="universe">the universe has spoken</p>
-          </>
+          </div>
         )}
       </div>
       {list.length > 0
@@ -66,6 +69,10 @@ export default function RandomPicker() {
           <div> </div>
         )
       }
-    </>
+      <div className="flex-row">
+        <p className="btn" onClick={() => history.push("/")} >start over</p>
+        <p className="btn" onClick={() => history.go(0)} >again</p>
+      </div>
+    </div>
   );
 }
