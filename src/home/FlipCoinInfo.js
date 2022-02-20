@@ -1,5 +1,4 @@
 import { useHistory } from "react-router-dom";
-import "./Card.css";
 
 export default function FlipCoinInfo() {
   const history = useHistory();

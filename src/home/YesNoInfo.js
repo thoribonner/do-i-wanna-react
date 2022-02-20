@@ -1,5 +1,4 @@
-import { useHistory } from "react-router-dom"
-import "./Card.css";
+import { useHistory } from "react-router-dom";
 
 export default function YesNoInfo() {
   const history = useHistory();

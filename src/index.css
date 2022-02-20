@@ -9,6 +9,239 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #153243;
+  padding: 1vw;
+  cursor: pointer;
+}
+
+.title {
+  font-family: 'Permanent Marker', cursive;
+  color: #b4b8ab;
+}
+
+.title-text {
+  font-size: 9vw;
+  letter-spacing: 1vw;
+  flex-wrap: wrap;
+}
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 5vw;
+  color: #eef0eb;
+}
+
+.not-found h2 {
+  font-family: 'Permanent Marker', cursive;
+}
+.emoji {
+  font-size: 50vw;
+  cursor: pointer;
+}
+
 .btn {
   cursor: pointer;
+  background: #eef0eb;
+  border-radius: 25px;
+  color: #153243;
+  padding: 5vw;
+  font-weight: 700;
+}
+
+.card {
+  background-color: #eef0eb;
+  font-family: 'Roboto', sans-serif;
+  padding: 1.7vw;
+  margin: 1.7vw;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card h2 {
+  background-color: #153243;
+  padding: 3vw 7vw;
+  align-self: center;
+  border-radius: 50px;
+  font-size: 5vw;
+  cursor: pointer;
+}
+
+.card p {
+  font-size: 5vw;
+  font-weight: 500;
+  color: #153243;
+  margin: 0;
+  padding: 0 3vw 3vw 3vw;
+}
+
+.card p span {
+  font-weight: 500;
+  font-style: italic;
+}
+
+.info {
+  text-align: center;
+  background-color: #eef0eb;
+  color: #153243;
+  font-weight: 700;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+}
+
+input {
+  padding: 10px;
+  margin-right: 5px;
+  width: 70vw;
+  font-size: 3vw;
+  border-radius: 10px 0 0 10px;
+}
+button {
+  padding: 10px;
+  background-color: #eef0eb;
+  border: #eef0eb;
+  border-radius: 0 10px 10px 0;
+
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.msg {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 12vw;
+  margin: 0 0 3vw 0;
+  letter-spacing: 1.7vw;
+  line-height: .8;
+  color: #db5461;
+}
+.oops {
+  color: #db5461;
+  margin-top: 0;
+}
+.picked{
+  text-align: center;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 10vw;
+  letter-spacing: 1.3vw;
+  color: #db5461;
+  padding: 25vw 3vw 0 3vw;
+  margin-bottom: 0;
+  overflow-wrap: break-word;
+}
+.universe {
+  text-align: center;
+  padding: 0 3vw 25vw 3vw;
+  margin-top: 0;
+  font-size: 3vw;
+}
+.option-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+  padding: 0;
+}
+.option-list li {
+  margin: 0 3px;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+footer {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 5vw;
+  color: #b4b8ab;
+  text-align: center;
+}
+.flex-row {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media all and (min-width: 600px) {
+  header {
+    display: inline;
+  }
+  .title-text {
+    font-size: 61px;
+    letter-spacing: .5rem;
+  }
+  .not-found {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-size: 2.4rem;
+  }
+  .not-found h2 {
+    width: 100%;
+    font-size: 2.4rem;
+  }
+  .emoji {
+    font-size: 10rem;
+  }
+   .btn,
+   .card h2,
+   .card p {
+     padding: 1rem;
+   }
+   .card {
+     flex: 1;
+     padding: 5px;
+   }
+   .flex-col {
+     flex-direction: row;
+   }
+   .card h2 {
+     font-size: 1rem;
+   }
+   .card p {
+     font-size: 1.2rem;
+   }
+
+   .content {
+     width: 50%;
+     margin: auto;
+   }
+   .msg {
+     font-size: 45px;
+   }
+
+   input {
+     padding: 5px;
+     width: 300px;
+     height: 20px;
+     font-size: 1.2rem;
+   }
+   button {
+     padding: 0 10px 0 10px;
+   }
+   .picked {
+     padding: 0;
+     font-size: 45px;
+   }
+   .universe {
+     padding: 0;
+     font-size: 1.2rem;
+   }
+   footer {
+     font-size: 37px;
+   }
+
 }

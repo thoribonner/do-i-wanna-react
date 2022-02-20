@@ -1,15 +1,16 @@
-import "./Content.css";
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 export default function YesNo() {
   const [decider, setDecider] = useState(null);
+  const history = useHistory();
 
   const handleClick = () => {
     setDecider((Math.random() * 1000).toFixed());
   };
 
   return (
-    <>
+    <div className="content">
       <p className="info">tap 🤔 below to get your response</p>
       <div onClick={handleClick}>
         {decider === null ? (
@@ -29,6 +30,10 @@ export default function YesNo() {
           </div>
         )}
       </div>
-    </>
+      <div className="flex-row">
+        <p className="btn" onClick={() => history.push("/")} >start over</p>
+        <p className="btn" onClick={() => history.go(0)} >again</p>
+      </div>
+    </div>
   );
 }
