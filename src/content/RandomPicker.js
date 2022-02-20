@@ -17,7 +17,6 @@ export default function RandomPicker() {
   };
   const handlePicker = () => {
     if (list.length > 0) {
-      console.log(Math.floor(Math.random() * list.length))
       setPicked(list[Math.floor(Math.random() * list.length)]);
       setItem("");
       setList([]);
