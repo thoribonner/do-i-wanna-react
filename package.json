@@ -1,5 +1,6 @@
 {
   "name": "do-i-wanna",
+  "homepage": "https://do-i-wanna-react.vercel.app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
