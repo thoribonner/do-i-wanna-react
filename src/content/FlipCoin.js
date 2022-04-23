@@ -1,13 +1,4 @@
-import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
-
-export default function FlipCoin() {
-  const [decider, setDecider] = useState(null);
-  const history = useHistory();
-
-  const handleClick = () => {
-    setDecider((Math.random() * 1000).toFixed());
-  };
+export default function FlipCoin({decider, handleClick, history}) {
   return (
     <div className="content">
       <p className="info">tap 🤔 below to get your response</p>

@@ -1,4 +1,5 @@
-import { Route, Switch } from 'react-router-dom';
+import React, { useState } from "react";
+import { Route, Switch, useHistory } from 'react-router-dom';
 import Footer from './common/Footer';
 import Header from './common/Header';
 import FlipCoin from './content/FlipCoin';
@@ -8,6 +9,13 @@ import YesNo from './content/YesNo';
 import Home from './home/Home';
 
 function App() {
+  const [decider, setDecider] = useState(null);
+  const history = useHistory();
+
+  const handleClick = () => {
+    setDecider((Math.random() * 1000).toFixed());
+  };
+
   return (
     <>
       <Header />
@@ -17,13 +25,13 @@ function App() {
             <Home />
           </Route>
           <Route exact path={"/yes-no"}>
-            <YesNo />
+            <YesNo decider={decider} handleClick={handleClick} history={history} />
           </Route>
           <Route exact path={"/flip-coin"}>
-            <FlipCoin />
+            <FlipCoin decider={decider} handleClick={handleClick} history={history} />
           </Route>
           <Route exact path={"/random-picker"}>
-            <RandomPicker />
+            <RandomPicker history={history} />
           </Route>
           <Route>
             <NotFound />

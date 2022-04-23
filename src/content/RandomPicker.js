@@ -1,11 +1,9 @@
 import { useState } from "react";
-import { useHistory } from "react-router-dom";
 
-export default function RandomPicker() {
+export default function RandomPicker({history}) {
   const [picked, setPicked] = useState(null);
   const [list, setList] = useState([]);
   const [item, setItem] = useState("");
-  const history = useHistory();
 
   const handleChange = ({ target }) => {
     setItem(target.value);
