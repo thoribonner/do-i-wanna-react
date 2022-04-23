@@ -9,7 +9,7 @@ do i wanna... is a tool made for:
 
 ## how does it work?
 
-[try it for yourself](do-i-wanna-react.vercel.app)
+[try it for yourself](https://do-i-wanna-react.vercel.app/)
 
 you will be greeted on the home screen by three options to proceed:
 - yes or no => will only give yes or no answers
